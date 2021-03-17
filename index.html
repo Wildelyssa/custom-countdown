@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Count Down</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <script src="https://kit.fontawesome.com/c1e8c6306e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- video background -->
+    <video class="video-background" loop muted autoplay>
+        <source src="./clock.mp4"></source>
+    </video>
+    <div class="video-overlay"></div>
+    <div class="container">
+        <!-- input -->
+        <div class="input-container" id="input-container">
+            <h1 class="centre sm-screen">Create a Custom Countdown!</h1>
+            <form class="form" id="countdown-form">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="What are you counting down to?">
+                <label for="date-picker">Select a Date</label>
+                <input type="date" id="date-picker">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <!-- countdown -->
+        <div class="countdown" id="countdown" hidden>
+            <h1 class="countdown-title centre" id ="countdown-title"></h1>
+            <div class="countdown-container centre sm-screen">
+                <span><p></p>Days</span>
+                <span><p></p>Hours</span>
+                <span><p></p>Minutes</span>
+                <span><p></p>Seconds</span>
+            </div>
+            <button id="countdown-btn">Reset</button>
+        </div>
+        <!-- complete -->
+        <div class="complete" id="complete" hidden>
+            <h1 class="complete-title centre">Countdown Complete!</h1>
+            <h1 id="complete-info"></h1>
+            <button id="complete-btn">New Countdown</button>
+        </div>
+    </div>  
+    
+<!-- Script -->
+<script src="script.js"></script>
+</body>
+</html>
